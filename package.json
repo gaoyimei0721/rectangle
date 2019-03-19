@@ -4,14 +4,14 @@
   "description": "矩形的面积和周长计算",
   "main": "rectangle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grnt lint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gaoyimei0721/rectangle.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "gaoyimei",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gaoyimei0721/rectangle/issues"
   },
