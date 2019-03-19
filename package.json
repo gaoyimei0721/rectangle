@@ -4,7 +4,7 @@
   "description": "矩形的面积和周长计算",
   "main": "rectangle.js",
   "scripts": {
-    "test": "grnt lint"
+    "test": "grunt lint && grunt unitTest"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,14 @@
   },
   "homepage": "https://github.com/gaoyimei0721/rectangle#readme",
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "chai": "^4.2.0",
+    "grunt": ">=0.4.5",
+    "grunt-mocha": "^0.4.12",
     "grunt-contrib-csslint": "^2.0.0",
     "grunt-contrib-less": "^2.0.0",
     "grunt-eslint": "^21.0.0",
-    "grunt-htmlhint": "^0.9.13"
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-mocha-cli": "^4.0.0",
+    "mocha": "^6.0.2"
   }
 }
