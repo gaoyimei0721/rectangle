@@ -33,5 +33,9 @@
     "grunt-mocha-cli": "^4.0.0",
     "grunt-usemin": "^3.1.1",
     "mocha": "^6.0.2"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {}
 }
