@@ -8,6 +8,12 @@ $(function() {
       $heightValidation = $('#height-validate'),
       $area = $('#area');
 
+  $width.keypress(function(e){
+    if(/[abcdf-zABCDF-Z`~!@#$%^&*()=_+[\]{}|;:'",<>/?\\]/.test(e.key)){
+     e.preventDefault();
+    }
+  });
+
   $width.focusout(function(){      
     var result = valid($width.val());     
     if(!result.isOK){              
