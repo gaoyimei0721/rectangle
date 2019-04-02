@@ -8,26 +8,24 @@ $(function() {
       $heightValidation = $('#height-validate'),
       $area = $('#area');
 
-  $width.focusout(function(){
-    var result = valid($width.val());
-
-    if(!result.isOK){
-      $widthValidation.html('宽度' + result.reason);
-      $width.select();
-    } else{
-      $widthValidation.html('');
-    }
+  $width.focusout(function(){      
+    var result = valid($width.val());     
+    if(!result.isOK){              
+      $widthValidation.html('宽度' + result.reason);                   
+      $width.select();                              
+    } else{              
+      $widthValidation.html('');           
+    }        
   });
 
-  $height.focusout(function(){
-    var result = valid($height.val());
-
-    if(!result.isOK){
-      $heightValidation.html('高度' + result.reason);
-      $height.select();
-    }else{
-      $heightValidation.html('');
-    }
+  $height.focusout(function(){      
+    var result = valid($height.val());      
+    if(!result.isOK){              
+      $heightValidation.html('高度' + result.reason);                    
+      $height.select();                              
+    }else{              
+      $heightValidation.html('');                        
+    }        
   });
 
   $btnCal.click(function(){      
