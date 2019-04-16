@@ -1,4 +1,4 @@
-/* global Rectangle,valid: true */
+/* global Rectangle, valid, isLegalKey: true */
 $(function() {    
   var $width = $('#width'),
       $height = $('#height'),
@@ -10,7 +10,7 @@ $(function() {
 
   $width.keypress(function(e){
     if(/[abcdf-zABCDF-Z`~!@#$%^&*()=_+[\]{}|;:'",<>/?\\]/.test(e.key)){
-     e.preventDefault();
+      e.preventDefault();
     }
   });
 
@@ -32,6 +32,12 @@ $(function() {
     }else{              
       $heightValidation.html('');                        
     }        
+  });
+
+  $height.keypress(function(e) {
+    if(!isLegalKey(e.key, e.target.value, e.target.selectionStart)) {   
+      e.preventDefault();               
+    }     
   });
 
   $btnCal.click(function(){      
