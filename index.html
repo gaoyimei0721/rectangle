@@ -24,18 +24,18 @@
   <label for="">面积：</label>                            
   <input id="area" type="text">
   -->
+  <form>
   <label>宽度：</label>
-  <input id="width" type="text" autofocus>
-  <span>*</span>
+  <input id="width" type="number" min="0.01" step="0.01" required autofocus>
+  <span></span>
   <br>
-  <div id="width-validate"></div>
   <label>高度：</label>
-  <input id="height" type="text">
-  <span>*</span>
+  <input id="height" type="number" min="0.01" step="0.01" required>
+  <span></span>
   <br>
-  <div id="height-validate"></div>
-  <input id="calculate" type="button" value="计算">
+  <input id="calculate" type="submit" value="计算">
   <br>
+  </form>
   <label>周长：</label>
   <input id="perimeter" type="text" disabled>
   <br>

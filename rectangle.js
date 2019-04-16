@@ -2,29 +2,14 @@
 $(function() {    
   var $width = $('#width'),
       $height = $('#height'),
-      $btnCal = $('#calculate'),
+      $form = $('form'),
       $perimeter = $('#perimeter'),
       $area = $('#area');
 
- 
-  $btnCal.click(function(){      
-    var w = $width.val(),
-        h = $height.val();
+  $form.submit(function(){
+    var rect = new rectangle($width.val(),$length.val());//eslint-disable-line no-undef
+    $area.val(rect.area());
+    $perimeter.val(rect.perimeter());
+  }); 
 
-    var validWidth = valid(w),
-        validHeight = valid(h);
-
-    var r = new Rectangle(w, h);
-
-    if(!validWidth.isOK){
-      return;
-    }
-
-    if(!validHeight.isOK){
-      return;
-    }
-
-    $perimeter.val(r.perimeter());
-    $area.val(r.area());
-  });
 });
